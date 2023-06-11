@@ -1,0 +1,200 @@
+/*Login e Registro*/
+
+html, body {
+    overflow-x: hidden;
+}
+
+.login__registro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2385f5;
+}
+
+.Inicio {
+    position: absolute;
+    top: 0;
+}
+
+.logo{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.container__login__registro {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container__login__registro .forms {
+    display: flex;
+    align-items: center;
+    height: 430px;
+    width: 200%;
+    transition: all 0.2s ease;
+}
+
+.container__login__registro .forms__login {
+    width: 50%;
+    padding: 2rem;
+    transition:  margin-left 0.18s ease;
+}
+
+.container__login__registro.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition:  margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container__login__registro .registro{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container__login__registro.active .registro{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container__login__registro.active .forms{
+    height: 745px;
+}
+
+.container__login__registro .forms__login .login__titulo {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    
+}
+
+.forms__login .login__titulo::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #2385f5;
+    border-radius: 24px;
+}
+
+.forms__login .campo__input {
+    position: relative;
+    height: 3.125rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.campo__input input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-bottom: 2px solid #858585;
+    border-top: 2px solid transparent;
+    transform: all 0.2s ease;
+}
+
+.campo__input input:is(:focus, :valid) {
+    border-bottom-color: #2385f5;
+}
+
+.campo__input i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #032b75;
+    font-size: 23px;
+    transform: all 0.2s ease;
+}
+
+.campo__input input:is(:focus, :valid)~i {
+    color:#2385f5;
+}
+
+.campo__input i.icon {
+    left: 0;
+}
+
+.campo__input i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.forms .checkbox-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #2385f5;
+}
+
+.forms .text {
+    color: var(--bg-color);
+    font-size: 0.875rem;
+    
+}
+
+.forms a.text {
+    color: #2385f5;
+    text-decoration: none;
+}
+
+.forms a:hover {
+    text-decoration: underline;
+}
+
+.botao {
+    margin-top: 35px;
+}
+
+.forms .botao a {
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: #2385f5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    width: 100%;
+}
+
+.botao a:hover {
+    background-color: #1057B0;
+}
+
+.forms .login__registrar {
+    margin-top: 30px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
