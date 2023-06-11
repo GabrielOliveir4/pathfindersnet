@@ -1,5 +1,5 @@
-@import url(/assets/style/login.css);
-@import url(/assets/style/rep.css);
+@import url(login.css);
+@import url(rep.css);
 
 *{
     padding: 0;
